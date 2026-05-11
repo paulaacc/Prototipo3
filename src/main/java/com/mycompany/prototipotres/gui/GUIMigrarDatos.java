@@ -92,7 +92,7 @@ public class GUIMigrarDatos extends javax.swing.JFrame {
             boolean res = true;
             
             if (res){
-                JOptionPane.showInternalMessageDialog(null, "Registros migrados exitosamente, revise la base de datos");
+                JOptionPane.showInternalMessageDialog(null, "Registros migrados exitosamente");
             }else{
                 JOptionPane.showInternalMessageDialog(null, "Error al migrar datos");
             }
