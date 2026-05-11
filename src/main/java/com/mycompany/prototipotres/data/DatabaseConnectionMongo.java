@@ -14,7 +14,8 @@ import com.mongodb.client.MongoDatabase;
  * @author pauda
  */
 public class DatabaseConnectionMongo {
-     private static final String CONNECTION_STRING = "mongodb://localhost:27017";
+    
+    private static final String CONNECTION_STRING = "mongodb://localhost:27017";
     private static final String DATABASE_NAME = "PER2026";
 
     private static MongoClient mongoClient = null;

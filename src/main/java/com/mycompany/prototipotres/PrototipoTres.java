@@ -4,6 +4,8 @@
 
 package com.mycompany.prototipotres;
 
+import com.mycompany.prototipotres.gui.GUIMigrarDatos;
+
 /**
  *
  * @author pauda
@@ -11,6 +13,7 @@ package com.mycompany.prototipotres;
 public class PrototipoTres {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        GUIMigrarDatos gui = new GUIMigrarDatos();
+        gui.setVisible(true);
     }
 }

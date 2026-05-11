@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.mycompany.prototipotres.servicios;
+package com.mycompany.prototipotres.model;
 
 /**
  *
@@ -12,15 +12,17 @@ public class ContactoEmergencia {
     private int doc_contacto;
     private String nombre;
     private String parentesco;
-    private String telefono;
+    private String celular;
     private int doc_dueño;
+    private String estado;
 
-    public ContactoEmergencia(int doc_contacto, String nombre, String parentesco, String telefono, int doc_dueño) {
+    public ContactoEmergencia(int doc_contacto, String nombre, String parentesco, String celular, int doc_dueño, String estado) {
         this.doc_contacto = doc_contacto;
         this.nombre = nombre;
         this.parentesco = parentesco;
-        this.telefono = telefono;
+        this.celular = celular;
         this.doc_dueño = doc_dueño;
+        this.estado = estado;
     }
 
     public int getDoc_contacto() {
@@ -47,12 +49,12 @@ public class ContactoEmergencia {
         this.parentesco = parentesco;
     }
 
-    public String getTelefono() {
-        return telefono;
+    public String getCelular() {
+        return celular;
     }
 
-    public void setTelefono(String telefono) {
-        this.telefono = telefono;
+    public void setCelular(String celular) {
+        this.celular = celular;
     }
 
     public int getDoc_dueño() {
@@ -62,6 +64,13 @@ public class ContactoEmergencia {
     public void setDoc_dueño(int doc_dueño) {
         this.doc_dueño = doc_dueño;
     }
-    
-    
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+
 }

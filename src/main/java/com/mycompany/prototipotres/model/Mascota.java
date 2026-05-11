@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.mycompany.prototipotres.servicios;
+package com.mycompany.prototipotres.model;
 
 /**
  *
@@ -14,19 +14,19 @@ public class Mascota {
     private String raza;
     private int edad;
     private double peso;
-    private String procedimiento;
     private int id_veterinaria;
-    private String dueño;
+    private int doc_dueño;
+    private String estado;
 
-    public Mascota(int id_mascota, String nombre, String raza, int edad, double peso, String procedimiento, int id_veterinaria, String dueño) {
+    public Mascota(int id_mascota, String nombre, String raza, int edad, double peso, int id_veterinaria, int doc_dueño, String estado) {
         this.id_mascota = id_mascota;
         this.nombre = nombre;
         this.raza = raza;
         this.edad = edad;
         this.peso = peso;
-        this.procedimiento = procedimiento;
         this.id_veterinaria = id_veterinaria;
-        this.dueño = dueño;
+        this.doc_dueño = doc_dueño;
+        this.estado = estado;
     }
 
     public int getId_mascota() {
@@ -69,14 +69,6 @@ public class Mascota {
         this.peso = peso;
     }
 
-    public String getProcedimiento() {
-        return procedimiento;
-    }
-
-    public void setProcedimiento(String procedimiento) {
-        this.procedimiento = procedimiento;
-    }
-
     public int getId_veterinaria() {
         return id_veterinaria;
     }
@@ -85,14 +77,20 @@ public class Mascota {
         this.id_veterinaria = id_veterinaria;
     }
 
-    public String getDueño() {
-        return dueño;
+    public int getDoc_dueño() {
+        return doc_dueño;
     }
 
-    public void setDueño(String dueño) {
-        this.dueño = dueño;
+    public void setDoc_dueño(int doc_dueño) {
+        this.doc_dueño = doc_dueño;
     }
-    
-    
-    
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+
 }

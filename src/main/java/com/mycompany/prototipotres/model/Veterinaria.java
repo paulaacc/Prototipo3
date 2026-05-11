@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.mycompany.prototipotres.servicios;
+package com.mycompany.prototipotres.model;
 
 /**
  *
@@ -13,14 +13,16 @@ public class Veterinaria {
     private String nombre;
     private String direccion;
     private String telefono;
-    private String repres_legal;
+    private String repre_legal;
+    private String estado;
 
-    public Veterinaria(int id_vet, String nombre, String direccion, String telefono, String repres_legal) {
+    public Veterinaria(int id_vet, String nombre, String direccion, String telefono, String repre_legal, String estado) {
         this.id_vet = id_vet;
         this.nombre = nombre;
         this.direccion = direccion;
         this.telefono = telefono;
-        this.repres_legal = repres_legal;
+        this.repre_legal = repre_legal;
+        this.estado = estado;
     }
 
     public int getId_vet() {
@@ -55,12 +57,20 @@ public class Veterinaria {
         this.telefono = telefono;
     }
 
-    public String getRepres_legal() {
-        return repres_legal;
+    public String getRepre_legal() {
+        return repre_legal;
     }
 
-    public void setRepres_legal(String repres_legal) {
-        this.repres_legal = repres_legal;
+    public void setRepre_legal(String repre_legal) {
+        this.repre_legal = repre_legal;
     }
-    
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+
 }

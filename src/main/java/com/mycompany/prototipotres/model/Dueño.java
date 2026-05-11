@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.mycompany.prototipotres.servicios;
+package com.mycompany.prototipotres.model;
 
 /**
  *
@@ -11,14 +11,16 @@ package com.mycompany.prototipotres.servicios;
 public class Dueño {
     private int doc_dueño;
     private String nombre;
-    private String telefono;
+    private String celular;
     private String correo;
+    private String estado;
 
-    public Dueño(int doc_dueño, String nombre, String telefono, String correo) {
+    public Dueño(int doc_dueño, String nombre, String celular, String correo, String estado) {
         this.doc_dueño = doc_dueño;
         this.nombre = nombre;
-        this.telefono = telefono;
+        this.celular = celular;
         this.correo = correo;
+        this.estado = estado;
     }
 
     public int getDoc_dueño() {
@@ -37,12 +39,12 @@ public class Dueño {
         this.nombre = nombre;
     }
 
-    public String getTelefono() {
-        return telefono;
+    public String getCelular() {
+        return celular;
     }
 
-    public void setTelefono(String telefono) {
-        this.telefono = telefono;
+    public void setCelular(String celular) {
+        this.celular = celular;
     }
 
     public String getCorreo() {
@@ -51,6 +53,14 @@ public class Dueño {
 
     public void setCorreo(String correo) {
         this.correo = correo;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
     }
     
     
