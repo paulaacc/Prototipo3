@@ -37,13 +37,13 @@ public class ServicioDueñoContacto {
         MongoCollection<Document> coleccion = db.getCollection("Dueños");
 
         if (conn != null && db != null) {
-            // Usamos try-with-resources para que los Statements se cierren solos
+            
             try (Statement stmtDuenos = connLocal.createStatement();
                  ResultSet rsDuenos = stmtDuenos.executeQuery(sqlDuenos);
                  PreparedStatement pstmtCont = connLocal.prepareStatement(sqlContactos)) {
 
                 while (rsDuenos.next()) {
-                    int idDueño = rsDuenos.getInt("DOC"); // Verifica el nombre de la columna
+                    int idDueño = rsDuenos.getInt("DOC"); 
 
                     // 1. Buscar contactos para este dueño específico
                     List<Document> contactos = new ArrayList<>();
@@ -66,7 +66,7 @@ public class ServicioDueñoContacto {
                             .append("Celular", rsDuenos.getString("CELULAR"))
                             .append("Correo", rsDuenos.getString("CORREO"))
                             .append("Estado", rsDuenos.getString("ESTADO"))
-                            .append("Contactos_Emergencia", contactos); // Aquí ocurre la magia del embebido
+                            .append("Contactos_Emergencia", contactos); 
 
                     // 3. Insertar en MongoDB
                     coleccion.insertOne(docDueno);
